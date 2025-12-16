@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Energy Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Import Fredoka (Rounded, playful) and Comic Neue (Handwritten style) */
+      @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka:wght@300..700&display=swap');
+
+      body {
+        /* Priority: Fredoka (Modern Bubbly), then Comic Neue, then system Comic Sans */
+        font-family: 'Fredoka', 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+      }
+
+      @keyframes bounce-in {
+        0% { transform: scale(0.8); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      .animate-bounce-in {
+        animation: bounce-in 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* --- 3D FONT STYLES --- */
+      
+      /* 3D General (White Pop) */
+      .font-3d-white {
+        color: #ffffff;
+        text-shadow: 
+            0px 2px 0px #cbd5e1,
+            0px 3px 0px #94a3b8,
+            0px 4px 6px rgba(0,0,0,0.3);
+      }
+
+      /* 3D Massive (For Simulation) */
+      .font-3d-massive {
+        color: #ffffff;
+        -webkit-text-stroke: 2px #d97706; /* Amber-600 */
+        text-shadow: 
+            0px 2px 0px #b45309,
+            0px 4px 0px #92400e,
+            0px 6px 0px #78350f,
+            0px 8px 10px rgba(0,0,0,0.4);
+      }
+
+      /* 3D Pink (For Belajar) */
+      .font-3d-pink {
+        color: #ffffff;
+        text-shadow: 
+            0px 2px 0px #db2777, /* Pink-600 */
+            0px 4px 0px #be185d,
+            0px 5px 8px rgba(190, 24, 93, 0.4);
+      }
+
+      /* 3D Green (For Misi) */
+      .font-3d-green {
+        color: #ffffff;
+        text-shadow: 
+            0px 2px 0px #059669, /* Emerald-600 */
+            0px 4px 0px #047857,
+            0px 5px 8px rgba(4, 120, 87, 0.4);
+      }
+
+      /* 3D Purple (For Quiz) */
+      .font-3d-purple {
+            color: #ffffff;
+            text-shadow: 
+                0px 2px 0px #7c3aed, /* Violet-600 */
+                0px 4px 0px #6d28d9,
+                0px 5px 8px rgba(109, 40, 217, 0.4);
+      }
+
+      /* 3D Text Outline (For Profile) */
+      .font-3d-outline {
+        color: white;
+        -webkit-text-stroke: 1.5px #1e293b; /* Slate-800 */
+        text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+      }
+
+      /* Dialog Text (Clean but raised) */
+      .font-dialog {
+        color: #334155;
+        text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
